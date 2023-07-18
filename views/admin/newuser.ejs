@@ -1,0 +1,36 @@
+<% include('../layouts/header.ejs') %>
+
+<link rel="stylesheet" href="/stylesheet/newuser.css">
+  <div class="wrapper">
+    <h2>Add new user</h2>
+    <form action="" method="post">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Enter user name">
+      </div>
+      <div class="input-box">
+        <input type="email" name="email" placeholder="Enter user email">
+      </div>
+      <div class="input-box">
+        <input type="number" name="mobile" placeholder="Enter user mobile">
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Enter user password">
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Add User">
+      </div>
+      <%
+    if(typeof message !== 'undefined'){
+        %>
+        <p style="color: red;"><%= message %></p>
+        <%
+    } 
+     %>
+     <div class="text" style="text-align: center;">
+       <a href="/admin/dashboard">Go Dashboard</a>
+      </div>
+    </form>
+  </div>
+
+
+<% include('../layouts/footer.ejs') %>
